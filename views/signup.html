@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        /* Reset default styles */
+        body, h1, p, form {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* Light background color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height */
+            color: #333;
+        }
+
+        /* Form styling */
+        form {
+            background-color: #fff; /* White background for form */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 30px;
+            width: 300px; /* Fixed width for form */
+            text-align: center; /* Center text */
+            margin: 20px; /* Add margin around form */
+        }
+
+        /* Title styling */
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #007bff; /* Bootstrap primary color */
+        }
+
+        /* Label and input styling */
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold; /* Make labels bold */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; /* Full width */
+            padding: 10px;
+            margin-bottom: 20px; /* Space between inputs */
+            border: 1px solid #ccc; /* Border styling */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 1rem; /* Font size */
+            transition: border-color 0.3s; /* Transition for border */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff; /* Change border color on focus */
+            outline: none; /* Remove outline */
+        }
+
+        /* Button styling */
+        button {
+            background-color: #007bff; /* Primary button color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 12px 16px; /* Increased padding for larger button */
+            cursor: pointer; /* Pointer on hover */
+            font-size: 1rem; /* Font size */
+            transition: background-color 0.3s; /* Transition for background */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        /* Error message styling */
+        #signupErrorMessage {
+            margin-top: 15px;
+            color: red; /* Error message color */
+            display: none; /* Hide error message by default */
+        }
+    </style>
+</head>
+<body>
+    <h1>Signup</h1>
+    <form id="signupForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Signup</button>
+    </form>
+    <p id="signupErrorMessage"></p>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

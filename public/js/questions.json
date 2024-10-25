@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the capital of Japan?",
+    "options": ["Seoul", "Tokyo", "Beijing", "Bangkok"],
+    "correctAnswer": "Tokyo"
+  },
+  {
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+    "correctAnswer": "Carbon Dioxide"
+  },
+  {
+    "question": "What is the largest land animal?",
+    "options": ["Elephant", "Giraffe", "Hippopotamus", "Rhino"],
+    "correctAnswer": "Elephant"
+  },
+  {
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "options": ["Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen"],
+    "correctAnswer": "William Shakespeare"
+  },
+  {
+    "question": "Which element has the chemical symbol 'O'?",
+    "options": ["Gold", "Oxygen", "Osmium", "Oganesson"],
+    "correctAnswer": "Oxygen"
+  },
+  {
+    "question": "What is the tallest mountain in the world?",
+    "options": ["K2", "Kangchenjunga", "Lhotse", "Mount Everest"],
+    "correctAnswer": "Mount Everest"
+  },
+  {
+    "question": "Which continent is known as the 'Dark Continent'?",
+    "options": ["Asia", "Africa", "South America", "Australia"],
+    "correctAnswer": "Africa"
+  },
+  {
+    "question": "What is the hardest natural substance on Earth?",
+    "options": ["Gold", "Diamond", "Quartz", "Iron"],
+    "correctAnswer": "Diamond"
+  },
+  {
+    "question": "Which animal is known as the 'King of the Jungle'?",
+    "options": ["Tiger", "Lion", "Elephant", "Gorilla"],
+    "correctAnswer": "Lion"
+  },
+  {
+    "question": "In which year did the Titanic sink?",
+    "options": ["1912", "1914", "1905", "1920"],
+    "correctAnswer": "1912"
+  }
+]

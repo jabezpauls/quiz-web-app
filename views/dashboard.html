@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* Reset default styles */
+        body, header, main, h1, h2, p, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* Light background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full height */
+            color: #333;
+            text-align: center; /* Center text */
+        }
+
+        /* Header styling */
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #007bff; /* Bootstrap primary color */
+        }
+
+        /* Main content styling */
+        main {
+            background-color: #fff; /* White background for main content */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 30px;
+            width: 300px; /* Fixed width for main content */
+            text-align: center; /* Center text */
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #333; /* Dark text color for headings */
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        /* Link styling */
+        a {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 15px;
+            background-color: #007bff; /* Primary link color */
+            color: white; /* Text color */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s; /* Transition for background */
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Dashboard</h1>
+    </header>
+    <main>
+        <h2>Welcome<span id="usernameDisplay"></span></h2>
+        <p>Click here to start the quizz<span id="scoreDisplay"></span></p>
+        <a href="quiz.html">Start Quiz</a>
+        <a href="signup.html">Log Out</a>
+    </main>
+    <script>
+        // Function to fetch dashboard data (username and score) from the server
+        async function loadDashboardData() {
+            try {
+                const response = await fetch('/dashboard', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to load dashboard data');
+                }
+
+                const data = await response.json();
+
+                // Display the username and score in the HTML
+                document.getElementById('usernameDisplay').innerText = data.username;
+                document.getElementById('scoreDisplay').innerText = data.score;
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+            }
+        }
+
+        // Load dashboard data when the page is loaded
+        window.onload = loadDashboardData;
+    </script>
+</body>
+</html>

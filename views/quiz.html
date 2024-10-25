@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <style>
+    /* Reset default styles */
+    body, h1, p, button, #quiz-container {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8; /* Light background color */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Full height */
+      color: #333;
+      padding: 20px; /* Add some padding to the body */
+    }
+
+    /* Title styling */
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem; /* Increased font size */
+      color: #007bff; /* Bootstrap primary color */
+      text-align: center; /* Center text */
+    }
+
+    /* Quiz container styling */
+    #quiz-container {
+      background-color: #fff; /* White background for quiz container */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      padding: 30px;
+      width: 1000px; /* Increased width for quiz container */
+      max-width: 90%; /* Make it responsive */
+      margin-bottom: 20px; /* Space below quiz container */
+      text-align: left; /* Left-align text in quiz container */
+      overflow-y: auto; /* Enable scrolling if content overflows */
+      max-height: 60vh; /* Limit the height of the quiz container */
+    }
+
+    /* Button styling */
+    button {
+      background-color: #007bff; /* Primary button color */
+      color: white; /* Text color */
+      border: none; /* No border */
+      border-radius: 5px; /* Rounded corners */
+      padding: 12px 16px; /* Increased padding for larger button */
+      cursor: pointer; /* Pointer on hover */
+      font-size: 1rem; /* Font size */
+      transition: background-color 0.3s; /* Transition for background */
+      margin-top: 20px; /* Space above button */
+    }
+
+    button:hover {
+      background-color: #0056b3; /* Darker shade on hover */
+    }
+
+    /* Score message styling */
+    #score {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #333; /* Score message color */
+      text-align: center; /* Center text */
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz</h1>
+  <div id="quiz-container">
+    <!-- Quiz questions will be injected here by JavaScript -->
+  </div>
+  <button id="submitQuiz">Submit</button>
+  <p id="score"></p>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
